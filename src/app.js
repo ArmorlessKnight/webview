@@ -9,12 +9,18 @@ const
   fs = require('fs');
 
 // Get certificates.
-let key = fs.readFileSync('creds/key.pem');
-let cert = fs.readFileSync('creds/server.crt');
- 
-let options = {
+let key = fs.readFileSync('creds/giftcard.key');
+let cert = fs.readFileSync('creds/a8ef875f4c606c2f.crt');
+let ca = fs.readFileSync('creds/gd_bundle-g2-g1.crt'); 
+/*let options = {
   key: key,
   cert: cert
+};*/
+
+let options = {
+  key: key,
+  cert: cert,
+  ca: ca
 };
 
 let app = express();

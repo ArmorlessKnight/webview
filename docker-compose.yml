@@ -4,9 +4,9 @@ services:
     build: ./
     restart: always
     ports:
-      - ${PORT}:${PORT}
+      - 443:443
     environment:
-      - PORT=${PORT}
+      - PORT=443
       - NODE_MAX_MEM=2000
 networks:
   default:
